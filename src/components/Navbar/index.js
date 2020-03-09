@@ -32,14 +32,14 @@ const Navbar = props => {
                         <a href='/'>Gallery</a>
                     </NavLinks>
                     <BurgerWrapper>
-                        <BurgerMenu 
+                        <BurgerMenu
                             navbarState={props.navbarState}
                             handleNavbar={props.handleNavbar}
                         />
                     </BurgerWrapper>
                 </FlexContainer>
             </NavbarItem>
-            <CollapseMenu 
+            <CollapseMenu
                 navbarState={props.navbarState}
                 handleNavbar={props.handleNavbar}
             />
@@ -47,17 +47,16 @@ const Navbar = props => {
     )
 }
 
-export default Navbar
-
 
 const NavbarItem = styled(animated.nav)`
     position: fixed;
     width: 100%;
     top: 10;
     left: 0;
-    background: #ddd;
+    background: tranparent;
     z-index: 1;
     font-size: 1.4rem;
+    overflow-x: hidden;
 `;
 
 const FlexContainer = styled.div`
@@ -101,3 +100,5 @@ const BurgerWrapper = styled.div`
         display: none;
     }
 `;
+
+export default Navbar
